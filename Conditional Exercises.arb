@@ -97,7 +97,34 @@ p "Part F:"
  p "Part G:"
 
  puts " Enter a value [0-100]"
+ number = gets.to_i
  
+ while (number!=-1)
+   if (number == -1)
+     break
+     elsif (number >=0 && number<=49)
+       puts "fail"
+     elsif(number >=50 && number<=60)
+       puts "pass"
+     elsif(number >=60 && number<=70)
+       puts "good"
+     elsif(number >=70 && number<=80)
+       puts "very good"
+     elsif(number >=80 && number<=90)
+       puts "excellent"
+     elsif(number >=90 && number<=100)
+       puts "incredible"
+   end
+ 
+ puts " Enter a value [0-100]"
+ number = gets.to_i
+ 
+ end
+ 
+ puts "We are out"
+ 
+     
+   
 
 
 
