@@ -97,7 +97,7 @@ p "Part F:"
  p "Part G:"
 
  puts " Enter a value [0-100]"
- number = gets.to_i
+ 
 
 
 
