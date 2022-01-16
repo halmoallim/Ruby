@@ -1,12 +1,105 @@
- 
+# A. 
+p "Part A:"
+
 a = 1
 b = 2
 c = 3
-
 if (b-a == c-b)
-    p "true"
+    puts "true"
 else
-    p "false"
+    puts "false"
 end
 
 
+# B. 
+p "Part B:"
+
+a = 1
+b = 2
+c = 3
+if ((b-a) <=1 || (c-a) <=1)  
+    puts "true"
+elsif((c-b)>3)
+    puts "false"
+end
+
+
+
+# C.
+p "Part C:"
+
+a = 34
+b = 49
+a_num = a%10
+b_num = b%10
+a/=10
+b/=10
+
+if(a_num == b_num || a==b_num || a_num == b || a==b)
+    puts "True"
+else 
+    puts "False"
+end
+
+
+
+# D. 
+p "Part D:"
+
+a = 1
+b = 10
+
+if( a==11 || b==1 || a+b==11 || a-b==11)
+    puts "True"
+else 
+    puts "False"
+end
+
+
+# E. 
+p "Part E:"
+
+st1 = "hellxo"
+st2 = "welcome"
+
+if(st1.include? "x") 
+    puts "False"
+elsif(st2.include? "x" )
+    puts "False"
+eslif (st1[0] != st2[0] && st1[-1] != st2[-1] )
+puts "True"
+end
+
+
+
+# F. 
+p "Part F:"
+
+ string = "testing"
+
+ if(string.include? "a") 
+    puts "True"
+ elsif (string.include? "e") 
+    puts "True"
+ elsif (string.include? "i") 
+    puts "True"
+ elsif (string.include? "o") 
+    puts "True"
+ elsif (string.include? "u") 
+    puts "True"
+ else
+    puts "False"
+ end
+
+
+
+ # G.
+ p "Part G:"
+
+ puts " Enter a value [0-100]"
+ number = gets.to_i
+
+
+
+
+ 
