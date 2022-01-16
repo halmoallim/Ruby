@@ -1,1 +1,39 @@
-p "hello"
+# String Exercises
+text = " Hello Ruby World "
+p text
+
+
+# A. Remove“Hello”,print the text
+text[" Hello"] = ""
+puts "A." + text
+
+# B. Add “Welcometo” to the beginning, print the text
+text.insert(0," welcome")
+puts "B." + text
+
+# C. Replace “World” by your name, print the text
+text["World"] = "Hassan"
+puts "C." + text
+
+# D. Put your name between quotes, print the text
+text["Hassan"] = '"Hassan"'
+puts "D." + text
+
+# E. Insert a “,” after the word “Ruby”, print the text
+text.insert(13,",")
+puts "F." + text
+
+# G. Insert a tab after the coma, print the text
+text.insert(13,"    ")
+puts "G." + text
+
+# H. Count the number of characters, print the count
+p text.length
+
+# I. Count the number of spaces, print the count
+p text.count(" ")
+
+# J. Replace the text spaces by “-”, print the text
+text.gsub!(/\s/, '-')
+p text
+
