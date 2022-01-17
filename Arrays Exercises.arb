@@ -1,2 +1,100 @@
 # A. 
 p "Part A:"
+
+arr = [1,2,3,4,5]
+p arr.max
+p arr.min
+p arr.count
+p arr.sum
+p arr.inject(:*)
+
+
+# B. 
+p "Part B:"
+
+arr2 = ["hassan", "saeed", "almoallim"]
+p arr2.include? 'hassan'
+p arr2.include? 'ali'
+
+
+
+# C. 
+p "Part C:"
+
+arr3 = [1,1,2,2,3,3,3]
+p arr_1 = [1,arr3.count(1)]
+p arr_2 = [2,arr3.count(2)]
+p arr_3 = [3,arr3.count(3)]
+
+
+
+# D. 
+p "Part D:"
+
+arr4 = [2,2,2]
+p arr4.reduce(0) {|sum, n| (sum+n)}
+
+
+# E. 
+p "Part E:"
+
+arr5 = [2,3,2,4,3,3,2]
+arr5_uniqe = arr5.uniq
+p arr5_uniqe
+
+
+# F. 
+p "Part F:"
+
+arr6 = [1,2,3,4,5,6,7,8]
+middle_two = []
+mid = arr6.length/2
+middle_two[0] = arr6[mid-1]
+middle_two[1] = arr6[mid]
+p middle_two
+
+
+
+# G. 
+p "Part G:"
+
+arr7 = [1,2,4,5,2]
+p arr7.max
+
+
+# H. 
+p "Part H:"
+
+arr8 = [2,3,5,5,5,17,1,1]
+
+i =0
+sum =0
+while i<arr8.length 
+    if (arr8[i] == 17)
+    i = i +1
+    else
+    sum = sum + arr8[i] 
+ 
+    end
+    i = i +1
+end 
+p sum
+
+
+
+# I. 
+p "Part I:"
+
+arr9 = [2,3,2,2,5,1,1,1]
+arr10 = [1,1,1,1]
+p arr9.all? {|x| x == arr[0]}
+p arr10.all? {|x| x == arr[0]}
+
+
+
+# J. 
+p "Part J:"
+
+require "matrix"
+arr11 = Matrix[['A','B','C'],['D','E','F']]
+puts arr11.transpose()
