@@ -228,31 +228,7 @@ p "Part G:"
 puts "While"
 i = 0 
 while i<arr.length
-  if (arr[i]>=2 && arr[i]<=9)
-    p arr[i]
+  if (arr[i]%2==0)
+    p arr[i] , "even"
   end
-      i+=1
 end
-
-
-puts "For"
-# for 
-
-for i in arr
-
-  arr.each { |x| puts x if x>=2 && x<=9 }
-  i+=1
-  break
-
-end
-
-puts "loop"
-# loop
-i = 0
-loop do
-  arr.each { |x| puts x if x>=2 && x<=9 }
-  i+=1
-  break 
-end
-
-
