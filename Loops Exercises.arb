@@ -42,6 +42,18 @@ i = 0
 while i<arr.length
     p arr[i]
     if (arr[i]== 5 || arr[i]== 6 )
-    next end
-    i = i+1
+        next end
+    
+end
+
+
+puts "For"
+# for
+for i in arr
+    if (arr== 5 || arr== 6 )
+        break
+    else
+    p i
+    end
+    
 end
