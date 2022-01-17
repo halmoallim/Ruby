@@ -38,6 +38,38 @@ p "Part B:"
 
 puts "While"
 # while: 
+i = 0 
+while i<arr.length
+  if (arr[i]!=5 && arr[i]!=6)
+    p arr[i]
+  end
+      i+=1
+end
+
+
+
+
+puts "For"
+# for
+for i in arr
+
+  arr.each { |x| puts x if x!=5 && x!=6 }
+  i+=1
+  break
+
+end
+
+
+
+puts "loop"
+# loop
+i = 0
+loop do
+  arr.each { |x| puts x if x!=5 && x!=6 }
+  i+=1
+  break 
+end
+
 
 
 
@@ -82,7 +114,6 @@ p "Part D:"
 
 puts "While"
 # while: 
-# while: 
 i = 0 
 while i<arr.length
   if (arr[i]%2==0)
@@ -121,7 +152,6 @@ p "Part E:"
 
 puts "While"
 # while: 
-# while: 
 i = 0 
 while i<arr.length
   if (arr[i]%2!=0)
@@ -151,3 +181,78 @@ loop do
   i+=1
   break 
 end
+
+
+
+
+
+# F. 
+p "Part F:"
+
+puts "While"
+i = 0 
+while i<arr.length
+  if (arr[i]>=2 && arr[i]<=9)
+    p arr[i]
+  end
+      i+=1
+end
+
+
+puts "For"
+# for 
+
+for i in arr
+
+  arr.each { |x| puts x if x>=2 && x<=9 }
+  i+=1
+  break
+
+end
+
+puts "loop"
+# loop
+i = 0
+loop do
+  arr.each { |x| puts x if x>=2 && x<=9 }
+  i+=1
+  break 
+end
+
+
+
+
+# G. 
+p "Part G:"
+
+puts "While"
+i = 0 
+while i<arr.length
+  if (arr[i]>=2 && arr[i]<=9)
+    p arr[i]
+  end
+      i+=1
+end
+
+
+puts "For"
+# for 
+
+for i in arr
+
+  arr.each { |x| puts x if x>=2 && x<=9 }
+  i+=1
+  break
+
+end
+
+puts "loop"
+# loop
+i = 0
+loop do
+  arr.each { |x| puts x if x>=2 && x<=9 }
+  i+=1
+  break 
+end
+
+
