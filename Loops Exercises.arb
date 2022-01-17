@@ -38,10 +38,18 @@ p "Part B:"
 
 puts "While"
 # while: 
-i = 0 
+
+
+
+
+
+# C. 
+p "Part C:"
+
+puts "While"
+# while: 
+
+i = 0
 while i<arr.length
-    break if (arr[i]== 5 || arr[i]== 6 )
-        
-        p arr[i]
-    
+    p arr[i]
 end
