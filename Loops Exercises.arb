@@ -229,6 +229,38 @@ puts "While"
 i = 0 
 while i<arr.length
   if (arr[i]%2==0)
-    p arr[i] , "even"
+    puts arr[i].to_s + " even"
+  elsif (arr[i]%2!=0)
+    puts arr[i].to_s + " odd"
   end
+  i+=1
 end
+
+
+puts "For"
+# for 
+
+for i in arr
+
+  if i.even? 
+        puts "#{i} even"
+    else
+        puts "#{i} odd"
+    end
+ i+=1
+
+end
+
+
+puts "loop"
+# loop
+i = 0
+loop do
+  if (arr[i].even?)
+    puts arr[i].to_s + " even"
+  elsif (arr[i].odd?)
+    puts arr[i].to_s + " odd"
+  end
+  i+=1
+end
+
