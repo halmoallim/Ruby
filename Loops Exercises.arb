@@ -23,11 +23,25 @@ puts "loop"
 i = 0
 loop do
     p arr[i]
-    if i>=arr.length
-        break
-    else
-        i +=1 
-    end
+    i +=1 
+    break if i>=arr.length 
 end
 
 
+
+
+
+
+
+# B. 
+p "Part B:"
+
+puts "While"
+# while: 
+i = 0 
+while i<arr.length
+    p arr[i]
+    if (arr[i]== 5 || arr[i]== 6 )
+    next end
+    i = i+1
+end
