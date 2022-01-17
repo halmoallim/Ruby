@@ -38,15 +38,6 @@ p "Part B:"
 
 puts "While"
 # while: 
-i = 0
-while i<arr.length
-    if arr == 5
-        i = i + 1
-        next
-    else
-        p arr[i]
-    end
-end
 
 
 
@@ -57,5 +48,12 @@ p "Part C:"
 
 puts "While"
 # while: 
+i = 0 
+while i<arr.length
+  if (arr[i]<6)
+    p arr[i]
+    i+=1
+  end
+end
 
 
