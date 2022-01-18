@@ -1,5 +1,9 @@
+
 File.open("/Users/blackroyal/Documents/GitHub/Ruby/Book Store/Book.txt", "r") do |file| 
 
-puts file.read()
+for line in file.readlines()
+    puts line
+end
+
 
 end 
