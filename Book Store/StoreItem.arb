@@ -1,0 +1,5 @@
+File.open("Book.txt", "r") do |file| 
+
+puts file.read()
+
+end 
