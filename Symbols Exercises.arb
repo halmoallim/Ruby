@@ -1,41 +1,49 @@
 # A. 
 p "Part A:"
 
-sym = :welcome_to_ruby
-p sym.start_with?("wel","to","zzz") 
+symb = :welcome_to_ruby
+p symb.start_with?("wel","to","zzz") 
 
 
 # B. 
 p "Part B:"
 
-p sym.end_with?("by","zy") 
+p symb.end_with?("by","zy") 
 
 
 # C. 
 p "Part C:"
 
-p sym.succ
+p symb.succ
 
 
 
-# D.  not working!
+# D.
 p "Part D:"
-
-p sym.size
+sym = :welcome_to_rubz
+symsize = sym
+symsize = sym.to_s.gsub!("_" , "")
+puts symsize.length
 
 
 # E. 
 p "Part E:"
 
-p sym.upcase
-p sym.downcase
+p symb.upcase
+p symb.downcase
 
 
 # F. 
 p "Part F:"
 
-p sym.to_s
-p sym.to_sym
+p symb.to_s
+p symb.to_sym
 
-# G. Not working
+# G.
 p "Part G:"
+sym = :welcome_to_rubz
+arr = []
+sym.to_s.each_char do |ch|
+  arr.append(ch.to_sym)
+end
+puts arr
