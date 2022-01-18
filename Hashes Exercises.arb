@@ -23,16 +23,17 @@ Employees =
 }
 
 # A.I
-
+p "Part I:"
 Employees.each_key do |na|
   puts Employees[na][:name]
 end
 
 # A.II
-
+p "Part II:"
 puts Employees.keys
 
 # A.III
+p "Part III:"
 
 max = 0
 Employees.each_key do |hieghstSal|
@@ -50,6 +51,7 @@ Employees.each_key do |hieghstSal|
 end
 
 # A.IV
+p "Part IV:"
 
 min = 5000
 Employees.each_key do |lowSal|
@@ -67,6 +69,7 @@ Employees.each_key do |lowSal|
 end
 
 # A.V
+p "Part V:"
 
 totalSal = 0
 count = 0
@@ -80,6 +83,7 @@ end
 puts  (totalSal/count).to_s
 
 # A.VI
+p "Part VI:"
 
 Employees.each_key do |nilSal|
   if Employees[nilSal][:salary] == nil
@@ -88,18 +92,16 @@ Employees.each_key do |nilSal|
 end
 puts Employees
 
-# B.
-arr = [10, 20, 30, 40, 10, 10, 20]
-uniq_Arr = []
-uniq_Arr = arr.uniq
-hash = {}
-i=0
-while i < uniq_Arr.length
-  puts arr.count(uniq_Arr[i])
-  hash[arr[i]] = arr.count(uniq_Arr[i])
-  i=i+1
+# A.VI
+p "Part VII:"
+
+Employees.each_key do |nilSal|
+  if Employees[nilSal][:salary] == nil
+    Employees.delete(nilSal)
+  end
 end
-puts hash
+puts Employees
+
 
 # B. 
 p "Part B:"
