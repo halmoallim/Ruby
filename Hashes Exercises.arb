@@ -24,29 +24,30 @@ Employees =
 
 # A.I
 p "Part I:"
-Employees.each_key do |na|
-  puts Employees[na][:name]
+Employees.each_key do |names|
+  puts Employees[names][:name]
 end
 
 # A.II
 p "Part II:"
 puts Employees.keys
 
+
 # A.III
 p "Part III:"
 
 max = 0
-Employees.each_key do |hieghstSal|
-  if Employees[hieghstSal][:salary] != nil
-    if Employees[hieghstSal][:salary] >=  max
-      max = Employees[hieghstSal][:salary]
+Employees.each_key do |highsal|
+  if Employees[highsal][:salary] != nil
+    if Employees[highsal][:salary] >=  max
+      max = Employees[highsal][:salary]
     end
   end
 end
 
-Employees.each_key do |hieghstSal|
-  if Employees[hieghstSal][:salary] ==  max
-    puts Employees[hieghstSal]
+Employees.each_key do |highsal|
+  if Employees[highsal][:salary] ==  max
+    p Employees[highsal]
   end
 end
 
@@ -54,19 +55,20 @@ end
 p "Part IV:"
 
 min = 5000
-Employees.each_key do |lowSal|
-  unless Employees[lowSal][:salary] == nil
-    if Employees[lowSal][:salary] < min
-      min = Employees[lowSal][:salary]
+Employees.each_key do |lowsal|
+  unless Employees[lowsal][:salary] == nil
+    if Employees[lowsal][:salary] < min
+      min = Employees[lowsal][:salary]
     end
   end
 end
 
-Employees.each_key do |lowSal|
-  if Employees[lowSal][:salary] ==  min
-    puts Employees[lowSal]
+Employees.each_key do |lowsal|
+  if Employees[lowsal][:salary] ==  min
+    puts Employees[lowsal]
   end
 end
+
 
 # A.V
 p "Part V:"
@@ -81,6 +83,7 @@ Employees.each_key do |salPerEmp|
 end
 
 puts  (totalSal/count).to_s
+
 
 # A.VI
 p "Part VI:"
