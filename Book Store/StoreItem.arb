@@ -16,13 +16,13 @@ end
 # Books class 
 class Book < StoreItem
     # Define the setter and & getter
-    attr_accessor :author_name , :number_of_pages , :isbn
+    attr_accessor :author_name , :option_of_pages , :isbn
 
     # Class constructor
     def initialize(t,pr,a,np,i)
         super(t,pr)
       @author_name = a
-      @number_of_pages = np
+      @option_of_pages = np
       @isbn = i
     end
 
@@ -49,13 +49,11 @@ class Magazine < StoreItem
 end
 
 
-file_data = File.open("/Users/blackroyal/Documents/GitHub/Ruby/Book Store/Book.txt","a+") 
-
-puts b1name =file_data.read.split(/,/)[0]
 
 
 
-puts "Select one of the choises [1-7] to start."
+puts "Please enter a number betwwen [1-7] to start"
+
 puts option1 = "1. Add store item"
 puts option2 = "2. List most expensive items"
 puts option3 = "3. List books within certain items"
@@ -66,7 +64,42 @@ puts option7 = "7. Delete an item"
 
 
 
-a = gets.chomp.to_i
-b = gets.chomp.to_i
-puts "You have entered #{a} and #{b} and their sum is #{a+b}"
+option = gets.chomp.to_i
+while (option!=-1)
+  if (option == -1)
+    break
+    elsif (option == 1)
+      puts "fail"
+    elsif(option == 2)
+      puts "pass"
+    elsif(option == 3)
+      puts "good"
+    elsif(option == 4)
+      puts "very good"
+    elsif(option == 5)
+      puts "excellent"
+
+    elsif(option == 6)
+
+      puts "Books:"
+      file_data = File.open("/Users/blackroyal/Documents/GitHub/Ruby/Book Store/Book.txt","a+") 
+      puts file_data.read
+
+      puts "Magazine:"
+      file_data = File.open("/Users/blackroyal/Documents/GitHub/Ruby/Book Store/Book.txt","a+") 
+      puts file_data.read
+
+      elsif(option == 7)
+        puts "7"
+  end
+
+puts "Please enter a number betwwen [1-7] to start again"
+option = gets.to_i
+
+end
+
+puts "We are out"
+
+
+
 
