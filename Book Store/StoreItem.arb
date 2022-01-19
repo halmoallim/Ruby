@@ -96,7 +96,7 @@ while (option!=-1)
         file.write("\n#{book_title}, #{book_price}, #{book_author}, #{book_pages}, #{book_isbn}")
       end
       puts "the new book added is:"
-      put book_item
+      p book_item
       elsif (catagory == 2)
       puts "Enter the title"
       magazine_title = gets.chomp
