@@ -45,16 +45,12 @@ class Magazine < StoreItem
 end
 
 
-file_data = File.read("/Users/blackroyal/Documents/GitHub/Ruby/Book Store/Book.txt").split(/\n/).map do |row|
-    title, price, author_name, number_of_pages, isbn = row.split(';')
-end
-puts file_data
+file_data = File.readlines("/Users/blackroyal/Documents/GitHub/Ruby/Book Store/Book.txt")
+p file_data[0]
 
 
-book1 = Book.new("title1",44,"an",2,3)
-p book1
-book2 = Magazine.new("title2",44,"pa",2)
-p book2
+
+
 
 
 
