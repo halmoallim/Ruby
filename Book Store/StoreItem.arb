@@ -16,10 +16,11 @@ end
 # Books class 
 class Book < StoreItem
     # Define the setter and & getter
-    attr_accessor :author_name , :number_of_pages, :isbn
+    attr_accessor :author_name , :number_of_pages , :isbn
 
     # Class constructor
-    def initialize(a,np,i)
+    def initialize(t,pr,a,np,i)
+        super(t,pr)
       @author_name = a
       @number_of_pages = np
       @isbn = i
@@ -34,7 +35,9 @@ class Magazine < StoreItem
     attr_accessor :publisher_agent , :date
 
     # Class constructor
-    def initialize(pa,d)
+    def initialize(t,pr,pa,d)
+        super(t,pr)
+
       @publisher_agent = pa
       @date = d
     end
@@ -42,6 +45,10 @@ class Magazine < StoreItem
 end
 
 
+book1 = Book.new("title1",44,"an",2,3)
+p book1
+book2 = Magazine.new("title2",44,"pa",2)
+p book2
 
 
 
@@ -53,13 +60,3 @@ end
 
 
 
-
-
-File.open("/Users/blackroyal/Documents/GitHub/Ruby/Book Store/Book.txt", "r") do |file| 
-
-for line in file.readlines()
-    puts line
-end
-
-
-end 
