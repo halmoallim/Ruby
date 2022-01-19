@@ -119,7 +119,7 @@ while (option!=-1)
 
       puts "Most expensive books:"
       book_data = File.open("/Users/blackroyal/Documents/GitHub/Ruby/Book Store/Book.txt","r") 
-      puts book_data.read {|price| price[2]}
+      puts book_data.sort_by {|price| price[2]}
 
 
     elsif(option == 3)
@@ -130,6 +130,15 @@ while (option!=-1)
 
       puts "Enter the publisher name"
       publisher = gets.chomp
+      magazine_data = File.open("/Users/blackroyal/Documents/GitHub/Ruby/Book Store/Magazine.txt","r") do |f|
+
+      f.each_line do |line|
+        if line =~ /#{publisher}/
+          puts "Founded: #{line}"
+        end
+      end
+    end
+      
 
     elsif(option == 6)
 
