@@ -1,4 +1,60 @@
 
+# Super class (StoreItem)
+class StoreItem
+    # Define the setter and & getter
+    attr_accessor :title , :price
+
+    # Class constructor
+    def initialize(t,pr)
+      @title = t
+      @price = pr
+    end
+
+end
+
+
+# Books class 
+class Book < StoreItem
+    # Define the setter and & getter
+    attr_accessor :author_name , :number_of_pages, :isbn
+
+    # Class constructor
+    def initialize(a,np,i)
+      @author_name = a
+      @number_of_pages = np
+      @isbn = i
+    end
+
+end
+
+
+# Magazine class 
+class Magazine < StoreItem
+    # Define the setter and & getter
+    attr_accessor :publisher_agent , :date
+
+    # Class constructor
+    def initialize(pa,d)
+      @publisher_agent = pa
+      @date = d
+    end
+
+end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 File.open("/Users/blackroyal/Documents/GitHub/Ruby/Book Store/Book.txt", "r") do |file| 
 
 for line in file.readlines()
