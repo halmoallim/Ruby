@@ -26,6 +26,10 @@ class Book < StoreItem
       @isbn = i
     end
 
+    def list_all_books()
+
+    end
+
 end
 
 
@@ -45,29 +49,23 @@ class Magazine < StoreItem
 end
 
 
-file_data = File.open("/Users/blackroyal/Documents/GitHub/Ruby/Book Store/Book.txt") do |file|
-    for line in file.readlines()
-        puts line
+file_data = File.open("/Users/blackroyal/Documents/GitHub/Ruby/Book Store/Book.txt","a+") 
 
-end
-p file_data[0]
-p file_data[1]
-p file_data[2]
+puts b1name =file_data.read.split(/,/)[0]
 
 
 
+puts "Select one of the choises [1-7] to start."
+puts option1 = "1. Add store item"
+puts option2 = "2. List most expensive items"
+puts option3 = "3. List books within certain items"
+puts option4 = "4. Search magazine by date"
+puts option5 = "5. Search magazine by publisher"
+puts option6 = "6. List of all store items"
+puts option7 = "7. Delete an item"
 
+option = gets.chomp
 
-
-
-
-
-
-
-
-
-
-
-
+puts "fff#{option}"
 
 
