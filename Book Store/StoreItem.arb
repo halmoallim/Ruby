@@ -46,7 +46,7 @@ end
 
 
 file_data = File.readlines("/Users/blackroyal/Documents/GitHub/Ruby/Book Store/Book.txt")
-p file_data[0]
+p file_data[1]
 
 
 
