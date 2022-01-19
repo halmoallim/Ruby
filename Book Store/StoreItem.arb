@@ -45,9 +45,8 @@ class Magazine < StoreItem
 end
 
 
-file_data = File.read("/Users/blackroyal/Documents/GitHub/Ruby/Book Store/Book.txt").split(/\n/).map do |row|
-    row.split(';')
-end
+file_data = File.read("/Users/blackroyal/Documents/GitHub/Ruby/Book Store/Book.txt").split(/,/) 
+
 p file_data[0]
 p file_data[1]
 p file_data[2]
