@@ -93,10 +93,10 @@ while (option!=-1)
       book_isbn= gets.chomp.to_i
       book_item = Book.new("#{book_title}","#{book_price}", "#{book_author}","#{book_pages}","#{book_isbn}")
       File.open("/Users/blackroyal/Documents/GitHub/Ruby/Book Store/Book.txt","a") do |file|
-        file.write("\n #{book_title}, #{book_price}, #{book_author}, #{book_pages}, #{book_isbn}")
+        file.write("\n#{book_title}, #{book_price}, #{book_author}, #{book_pages}, #{book_isbn}")
       end
       puts "the new book added is:"
-      p book_item
+      put book_item
       elsif (catagory == 2)
       puts "Enter the title"
       magazine_title = gets.chomp
