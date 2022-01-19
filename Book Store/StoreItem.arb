@@ -26,9 +26,7 @@ class Book < StoreItem
       @isbn = i
     end
 
-    def list_all_books()
-
-    end
+    
 
 end
 
@@ -46,13 +44,22 @@ class Magazine < StoreItem
       @date = d
     end
 
+    def search_publisher(string, file_path)
+      File.open(file_path) do |f|
+       p f.readlines.each { |line| return string if line.include?(string)}
+      end
+      nil
+    end
+
+    
+
 end
 
 
 
 
 
-puts "Please enter a number betwwen [1-7] to start"
+puts "Please enter a number betwwen [1-7] to start, or -1 to exit"
 
 puts option1 = "1. Add store item"
 puts option2 = "2. List most expensive items"
@@ -68,8 +75,41 @@ option = gets.chomp.to_i
 while (option!=-1)
   if (option == -1)
     break
+
     elsif (option == 1)
-      puts "fail"
+
+      puts "1.Book or 2.Magazine"
+      catagory = gets.chomp.to_i
+      if (catagory == 1)
+      puts "Enter the title"
+      book_title = gets.chomp
+      puts "Enter the price"
+      book_price = gets.chomp.to_i
+      puts "Enter the author name"
+      book_author = gets.chomp
+      puts "Enter the how many pages"
+      book_pages = gets.chomp.to_i
+      puts "Enter the isbn"
+      book_isbn= gets.chomp.to_i
+      book_item = Book.new("#{book_title}","#{book_price}", "#{book_author}","#{book_pages}","#{book_isbn}")
+      puts "the new book added is:"
+      p book_item
+      elsif (catagory == 2)
+      puts "Enter the title"
+      magazine_title = gets.chomp
+      puts "Enter the price"
+      magazine_price = gets.chomp.to_i
+      puts "Enter the publisher-agent"
+      magazine_publisher_agent = gets.chomp
+      puts "Enter the date"
+      magazine_date = gets.chomp.to_i
+      
+      magazine_item = Magazine.new("#{magazine_title}","#{magazine_price}", "#{magazine_publisher_agent}","#{magazine_date}")
+      puts "the new magazine added is:"
+      p magazine_item
+      end
+
+
     elsif(option == 2)
       puts "pass"
     elsif(option == 3)
@@ -77,17 +117,19 @@ while (option!=-1)
     elsif(option == 4)
       puts "very good"
     elsif(option == 5)
-      puts "excellent"
+
+      puts "Enter the publisher name"
+      publisher = gets.chomp
 
     elsif(option == 6)
 
       puts "Books:"
-      file_data = File.open("/Users/blackroyal/Documents/GitHub/Ruby/Book Store/Book.txt","a+") 
-      puts file_data.read
+      book_data = File.open("/Users/blackroyal/Documents/GitHub/Ruby/Book Store/Book.txt","r") 
+      puts book_data.read
 
       puts "Magazine:"
-      file_data = File.open("/Users/blackroyal/Documents/GitHub/Ruby/Book Store/Book.txt","a+") 
-      puts file_data.read
+      magazine_data = File.open("/Users/blackroyal/Documents/GitHub/Ruby/Book Store/Magazine.txt","r") 
+      puts magazine_data.read
 
       elsif(option == 7)
         puts "7"
