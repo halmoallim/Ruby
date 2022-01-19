@@ -105,9 +105,11 @@ while (option!=-1)
       puts "Enter the publisher-agent"
       magazine_publisher_agent = gets.chomp
       puts "Enter the date"
-      magazine_date = gets.chomp.to_i
-      
+      magazine_date = gets.chomp
       magazine_item = Magazine.new("#{magazine_title}","#{magazine_price}", "#{magazine_publisher_agent}","#{magazine_date}")
+      File.open("/Users/blackroyal/Documents/GitHub/Ruby/Book Store/Magazine.txt","a") do |file|
+        file.write("\n#{magazine_title}, #{magazine_price}, #{magazine_publisher_agent}, #{magazine_date}")
+      end
       puts "the new magazine added is:"
       p magazine_item
       end
