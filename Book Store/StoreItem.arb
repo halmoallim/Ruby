@@ -119,7 +119,7 @@ while (option!=-1)
 
       puts "Most expensive books:"
       book_data = File.open("/Users/blackroyal/Documents/GitHub/Ruby/Book Store/Book.txt","r") 
-      puts book_data.sort_by {|price| price[2]}
+      puts book_data.read {|price| price[2]}
 
 
     elsif(option == 3)
