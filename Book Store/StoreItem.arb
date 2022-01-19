@@ -64,8 +64,9 @@ puts option5 = "5. Search magazine by publisher"
 puts option6 = "6. List of all store items"
 puts option7 = "7. Delete an item"
 
-option = gets.chomp
 
-puts "fff#{option}"
 
+a = gets.chomp.to_i
+b = gets.chomp.to_i
+puts "You have entered #{a} and #{b} and their sum is #{a+b}"
 
