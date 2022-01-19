@@ -45,8 +45,11 @@ class Magazine < StoreItem
 end
 
 
-file_data = File.readlines("/Users/blackroyal/Documents/GitHub/Ruby/Book Store/Book.txt") 
+file_data = File.open("/Users/blackroyal/Documents/GitHub/Ruby/Book Store/Book.txt") do |file|
+    for line in file.readlines()
+        puts line
 
+end
 p file_data[0]
 p file_data[1]
 p file_data[2]
