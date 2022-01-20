@@ -154,12 +154,12 @@ while (option!=-1)
       catagory = gets.chomp.to_i
       if (catagory == 1)
         puts "Enter the title to delete it:"
-        delete_item = gets.chomp
+        item_num = gets.chomp
 read_file = File.new('/Users/blackroyal/Documents/GitHub/Ruby/Book Store/Book.txt', "r").read
 write_file = File.new('/Users/blackroyal/Documents/GitHub/Ruby/Book Store/Book.txt', "w")
 
 read_file.each_line do |line|
-  write_file.write(line) unless line.include? "#{delete_item}"
+  write_file.write(line) unless line.include? "#{item_num}"
 end
         
         puts "not implemented yet"
