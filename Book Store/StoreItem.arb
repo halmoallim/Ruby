@@ -161,7 +161,7 @@ while (option!=-1)
         read_file.each_line do |line|
         write_file.write(line) unless line.include? "#{delete_item}"
       end
-    elsif (catagory == 2)
+      elsif (catagory == 2)
       puts "Enter the title to delete it:"
       delete_item = gets.chomp
       read_file = File.new('/Users/blackroyal/Documents/GitHub/Ruby/Book Store/Magazine.txt', "r").read
